@@ -44,7 +44,16 @@ export default function Contador() {
 
   const increment = () => updateTo(count + 1)
   const decrement = () => updateTo(count - 1)
-  const reset = () => updateTo(0)
+  const reset = () => {
+    setCount(MIN)
+    setHistory([])
+    try {
+      localStorage.setItem(STORAGE_KEY, String(MIN))
+      localStorage.setItem(HISTORY_KEY, JSON.stringify([]))
+    } catch (e) {
+      // ignore storage errors
+    }
+  }
 
   const color = count <= 3 ? 'red' : count <= 7 ? 'yellow' : 'green'
 

@@ -39,6 +39,7 @@ export default function RootLayout({
             <Link href="/projetos">Projetos</Link>
             <Link href="/contador">Contador</Link>
             <Link href="/deisiShop">Deisi Shop</Link>
+            <Link href="/paises">Paises</Link>
 
 
           </nav>

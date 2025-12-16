@@ -7,6 +7,7 @@ import ProductCard from '@/components/ProductCard/ProductCard'
 import useSWR from 'swr'
 import { Spinner } from '@/components/ui/spinner'
 import { useMemo } from 'react'
+import { saveLastViewed } from '@/lib/storage'
 
 export default function page() {
   //Gestao de Estados
@@ -67,6 +68,12 @@ export default function page() {
 
 
 //Efeitos
+
+useEffect(()=>{
+  if(!data) return
+
+  saveLastViewed
+})
   useEffect(() => {
     const localProductsList = localStorage.getItem('productsList') || '[]';
     setProductList(JSON.parse(localProductsList));

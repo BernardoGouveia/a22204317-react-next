@@ -13,6 +13,13 @@ export function toggleFavorite(id: string) {
   localStorage.setItem(FAVORITES_KEY, JSON.stringify(updated))
 }
 
+
+
+
+
+
+
+
 export function saveLastViewed(product: any) {
   if (typeof window === 'undefined') return
   const stored = JSON.parse(localStorage.getItem(LAST_VIEWED_KEY) || '[]')

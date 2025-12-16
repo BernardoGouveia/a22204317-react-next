@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import { getFavorites,toggleFavorite } from '@/lib/storage';
 interface ProdutoDetalheProps {
     title: string;
     description: string;

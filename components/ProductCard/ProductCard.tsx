@@ -33,7 +33,6 @@ export default function ProductCard({
   }
 
   function handleInfoClick() {
-    // guarda como "último visto" quando o user abre o detalhe
     saveLastViewed({
       id,
       title,
